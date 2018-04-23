@@ -1,31 +1,21 @@
-Welcome to Glitch
-=================
+Flag my patient
+===============
 
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
+This is a simple demo app (web/phone/tablet) to alert clinicians if a patient under their care is admitted.
 
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
+It is common for clinicians to want to be alerted when a patient under their care has an emergency attendendance. This is often true for patients with a history of cancer.  Don't use this app! It is just a demo and would be very unsafe to use.
 
-Find out more [about Glitch](https://glitch.com/about).
-
-
-Your Project
+Project Description
 ------------
 
-On the front-end,
-- edit `public/client.js`, `public/style.css` and `views/index.html`
-- drag in `assets`, like images or music, to add them to your project
+On the front-end, `public/client.js`, `public/style.css` and `views/index.html`, provide a singe-page-web-app.
 
-On the back-end,
-- your app starts at `server.js`
-- add frameworks and packages in `package.json`
-- safely store app secrets in `.env` (nobody can see this but you and people you invite)
-
-This app has a database!
-- this app uses sqlite but you can power your apps with [a number of other storage options](https://glitch.com/storage)
-- `sqlite.db` is created and put into the `.data` folder, a hidden directory whose contents aren’t copied when a project is remixed. you can see the contents of `.data` in the console under "advanced options"
+On the back-end, `server.js` serves the app and required endpoints to query and update the database.
 
 
-Made by [Fog Creek](https://fogcreek.com/)
--------------------
+to do
+-------
+* users db
+* authentication
+* interfacing to other apps/databases
 
-\ ゜o゜)ノ
