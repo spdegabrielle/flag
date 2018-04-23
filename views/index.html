@@ -1,0 +1,73 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html lang="en" manifest="cache.manifest">
+  <head>
+    <title>Flag my Patient</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="viewport" content="user-scalable=no, width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    <link rel="apple-touch-icon" href="https://cdn.glitch.com/a79851ff-a60e-4981-86d1-2bc91299bd3f%2Fincon2.png?1524480667329" />
+    <link rel="apple-touch-startup-image" href="https://cdn.glitch.com/a79851ff-a60e-4981-86d1-2bc91299bd3f%2Fstartup.png?1524234965116" />
+    <script>
+    function BlockMove(event) {
+      // Tell Safari not to move the window.
+      // use  body ontouchmove="BlockMove(event);" to enable
+      event.preventDefault() ;
+    }
+    </script>
+    
+  </head>
+  <body>
+    <header><h1>Flag my Patient!</h1><p>Unplanned attendance notifications for patients of interest.</p></header>
+    <p>User:<em>Dr T. Test</em> Team:<em>Haematology</em></p>
+    <main>
+      <section class="dreams">
+        <h2>Unplanned attendances</h2>
+        <p>The following patients have attended A&E.</p>
+        <p>Use button to indicate you have reviewed patient.</p>
+        <ul id="patients"/>
+      </section>
+      
+      <section class="seen">
+        <h2>History</h2>
+        <ul id="seen"/>
+      </section>
+      
+      <form method="POST" action="/setStatus" style="display:none;">
+        <input name="seenby" type="hidden">
+        <input name="pid"    type="hidden">
+      </form>
+
+    </main>
+
+    <footer>by Stephen</footer>
+    <!-- script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script -->
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/client.js"></script>
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script> -->
+
+  </body>
+</html>
